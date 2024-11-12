@@ -27,18 +27,31 @@ flowchart TD
     B --> |Never Restart| C[Container Stops]
     B --> |On Failure| D[Restart if Error Occurs]
     B --> |Predetermined Time on Failure| E[Restart for Set Duration]
-    B --> |Always Restart| F[Continuous Restart with Backoff]
+    B --> |Always Restart| F[Continuous Restart with Exponential Backoff]
 
-    F --> G{Exponential Backoff}
+    F --> G{Exponential Backoff Strategy}
     G --> H[1st Restart: 1 sec]
     G --> I[2nd Restart: 2 sec]
     G --> J[3rd Restart: 4 sec]
     G --> K[4th Restart: 8 sec]
-    G --> L[Nth Restart: Exponential Delay]
+    G --> L[Nth Restart: Increasing Delay]
 
-    style B fill:#FFDDC1,stroke:#333,stroke-width:2px
-    style G fill:#FFEBB7,stroke:#333,stroke-width:2px
-    style F fill:#C1FFD7,stroke:#333,stroke-width:2px
+    %% Styling for light and dark modes
+    style A fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:white,font-weight:bold
+    style B fill:#FF9800,stroke:#EF6C00,stroke-width:2px,color:white,font-weight:bold
+    style F fill:#00ACC1,stroke:#00838F,stroke-width:2px,color:white,font-weight:bold
+    style G fill:#7986CB,stroke:#5C6BC0,stroke-width:2px,color:white,font-weight:bold
+    style C fill:#EF9A9A,stroke:#E57373,stroke-width:2px,color:white
+    style D fill:#FFCC80,stroke:#FFA726,stroke-width:2px,color:black
+    style E fill:#B2DFDB,stroke:#80CBC4,stroke-width:2px,color:black
+    style H fill:#FFF9C4,stroke:#FFEB3B,stroke-width:1px,color:black
+    style I fill:#FFF9C4,stroke:#FFEB3B,stroke-width:1px,color:black
+    style J fill:#FFF9C4,stroke:#FFEB3B,stroke-width:1px,color:black
+    style K fill:#FFF9C4,stroke:#FFEB3B,stroke-width:1px,color:black
+    style L fill:#FFF9C4,stroke:#FFEB3B,stroke-width:1px,color:black
+
+    %% Line colors
+    linkStyle default stroke:#455A64,stroke-width:1.5px
 ```
 
 Docker’s **exponential backoff strategy** progressively increases the delay between restart attempts to avoid constant restart loops. This helps prevent system strain by extending the wait time for each successive restart attempt.
