@@ -2,6 +2,12 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-Project-blue?style=flat&logo=github)](https://github.com/TheToriqul/docker-auto-restart)
 [![GitHub stars](https://img.shields.io/github/stars/TheToriqul/docker-auto-restart?style=social)](https://github.com/TheToriqul/docker-auto-restart/stargazers)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Shell Script](https://img.shields.io/badge/Shell_Script-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![DevOps](https://img.shields.io/badge/DevOps-0A66C2?style=for-the-badge&logo=devops&logoColor=white)
+![Continuous Integration](https://img.shields.io/badge/Continuous_Integration-0085CA?style=for-the-badge&logo=githubactions&logoColor=white)
+![Automation](https://img.shields.io/badge/Automation-FF7A59?style=for-the-badge&logo=robotframework&logoColor=white)
 
 ## 📋 Overview
 
